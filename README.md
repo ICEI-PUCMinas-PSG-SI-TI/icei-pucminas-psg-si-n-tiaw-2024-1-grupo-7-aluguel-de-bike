@@ -12,7 +12,7 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 ## Professores responsáveis
 
 * Pedro Felipe Alves de Oliveira
-* Nome completo do professor 2
+* Caroline Rhaian da Silva Jandre
 
 ## Instruções de utilização
 
