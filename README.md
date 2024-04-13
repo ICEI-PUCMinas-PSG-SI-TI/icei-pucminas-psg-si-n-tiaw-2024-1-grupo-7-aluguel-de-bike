@@ -6,11 +6,11 @@ A Easy Mov tem o objetivo de implementar um serviço de "Aluguel de bicicletas" 
 
 ## Alunos integrantes da equipe
 
-* Anderson Junior
+* Anderson Junior dos Santos
 * Andre Phillipe Leandro
 * Arthur Marques Araujo Pena
-* Davi Guedes
-* Raul Nascimento
+* Davi Guedes de Ávila
+* Raul Nascimento Santos
 
 ## Professores responsáveis
 
