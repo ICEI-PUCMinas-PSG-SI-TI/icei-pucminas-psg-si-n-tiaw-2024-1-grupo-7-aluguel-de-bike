@@ -1,13 +1,16 @@
 # Easy Mov
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O setor de transporte contribui significativamente para as emissões de gases de efeito estufa no Brasil, sendo responsável por aproximadamente 11% do total. A promoção do uso de bicicletas pode ajudar a reduzir essas emissões, uma vez que a qualidade do ar está abaixo dos padrões aceitáveis devido à poluição causada pelos veículos motorizados.
+
+A Easy Mov tem o objetivo de implementar um serviço de "Aluguel de bicicletas" em campus universitários para promover uma mobilidade mais sustentável, acessível e eficiente.
 
 ## Alunos integrantes da equipe
 
+* Anderson Junior
 * Andre Phillipe Leandro
 * Arthur Marques Araujo Pena
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Davi Guedes
+* Raul Nascimento
 
 ## Professores responsáveis
 
