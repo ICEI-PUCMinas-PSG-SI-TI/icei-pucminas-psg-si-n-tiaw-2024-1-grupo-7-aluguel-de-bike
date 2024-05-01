@@ -1,0 +1,28 @@
+.footer{
+    background-image: linear-gradient( to right, #8452ed, #4a2890,#524570);
+    color: white;
+    text-align: center;
+}
+.navbar{
+    background-image: linear-gradient( to right, #8452ed, #4a2890,#524570);
+}
+.navbar-brand{
+    color: white;
+}
+.nav-link{
+    color: white;
+    align-items:end;
+}
+.Nos{
+    border-bottom: solid;
+}
+.Missao{
+    border-bottom: solid;
+}
+.Visao{
+    border-bottom: solid;
+}
+.logo{
+    height:130px ;
+    width: 130px;
+}
