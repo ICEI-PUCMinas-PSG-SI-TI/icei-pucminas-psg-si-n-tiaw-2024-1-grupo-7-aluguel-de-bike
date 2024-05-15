@@ -3,6 +3,7 @@ document.getElementById('loginButton').addEventListener('click', fazerLogin);
 function fazerLogin() {
     var email = document.getElementById('email').value;
     var senha = document.getElementById('senha').value;
+   
 
     /* Adicionar mais credenciais aqui, juntamente no arquivo Json*/
     var credenciais =  [
@@ -25,9 +26,10 @@ function fazerLogin() {
             break;
         }
     }
-
+    
     if (loginValido) {
-        alert('Login realizado com sucesso!');
+        
+        window.location.href = '/HTML - Easy Mov/ADM/Logado.html';
     } else {
         alert('Email ou senha incorretos. Por favor, tente novamente.');
     }
