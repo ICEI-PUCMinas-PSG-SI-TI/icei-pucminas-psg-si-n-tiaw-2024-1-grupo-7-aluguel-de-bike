@@ -1,8 +1,8 @@
 document.getElementById('loginButton').addEventListener('click', fazerLogin);
 
 function fazerLogin() {
-    var email = document.getElementById('email').value;
-    var senha = document.getElementById('senha').value;
+    var email = document.getElementById('inputEmail').value;
+    var senha = document.getElementById('inputPassword').value;
 
     /* Adicionar mais credenciais aqui, juntamente no arquivo Json*/
     var credenciais =  [
