@@ -1,0 +1,110 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+
+.logo {
+  height: 195px;
+  width: 195px;
+}
+.navbar-brand {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav {
+  background-image: linear-gradient(to right, #8452ed, #4a2890, #524570);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, #8452ed, #4a2890, #524570);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.d-flex{
+  background-image: linear-gradient(to right, #8452ed, #4a2890, #524570);
+  display: flex!important;
+}
+
+.text{
+  color: #e5e5e5;
+}
+
+.my-0 {
+  color: #e5e5e5;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

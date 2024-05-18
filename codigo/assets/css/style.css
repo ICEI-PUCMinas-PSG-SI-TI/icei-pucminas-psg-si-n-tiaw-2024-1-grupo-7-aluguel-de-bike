@@ -1,50 +1,109 @@
-
-.footer{
-    background-image: linear-gradient( to right, #8452ed , #4a2890,#524570);
+.footer {
+    background-image: linear-gradient(to right, #8452ed, #4a2890, #524570);
     color: white;
     text-align: center;
 }
-.navbar{
-    background-image: linear-gradient( to right, #8452ed, #4a2890,#524570);
+
+.navbar {
+    background-image: linear-gradient(to right, #8452ed, #4a2890, #524570);
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
-.navbar-brand{
+
+.nav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.navbar-brand {
     color: white;
 }
-.nav-link{
+
+.nav-link {
     color: white;
-    align-items:end;
+    align-items: end;
 }
 
 /* Dentro do Sobre Nos*/
-.Nos{
+.Nos {
     border-bottom: solid;
-    
+
 }
-.Missao{
+
+.Missao {
     border-bottom: solid;
-    
+
 }
-.Visao{
+
+.Visao {
     border-bottom: solid;
-    
+
 }
-.logo{
-    
-    height:130px ;
-    width: 130px;
-      
-     
-} 
+
+
+.logo {
+    height: 195px;
+    width: 195px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 
 .center-box {
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
-        margin: auto;
-        width: 396px;
-        padding: 20px;
-        border: 1px solid #ccc; 
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-        background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    margin: auto;
+    width: 396px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
     }
-    
+}
+
+.container {
+    max-width: 960px;
+}
+
+.pricing-header {
+    max-width: 700px;
+}
+
+.card-deck .card {
+    min-width: 220px;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.a {
+    text-align: justify;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
