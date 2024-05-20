@@ -124,7 +124,7 @@
 }
 
 .btn_next {
-    position: fixed;
+    position: absolute;
     bottom: 2.4rem;
     right: 23%;
     background-color: #56F482;
@@ -136,6 +136,43 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.btn_next a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    
+}
+
+.content_table{
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+table th{
+    background-color: #e7e1e1;
+}
+
+.center{
+    text-align: center;
+}
+
+.btn_return{
+    position: fixed;
+    margin-left: 290px;
+    margin-top: 20px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
 .btn_next a {
     text-decoration: none;
     color: black;

@@ -1,0 +1,82 @@
+// Configurar a ação do botão de cadastro
+document.getElementById('cadastrarBike').addEventListener('click', cadastrarBike);
+
+// Ler bikes do localStorage
+function leBikes() {
+    let strBikes = localStorage.getItem('db');
+    let objBikes = { Bikes: [] };
+    if (strBikes) {
+        objBikes = JSON.parse(strBikes);
+    }
+    return objBikes;
+}
+
+// Salvar bikes no localStorage
+function salvaBikes(dados) {
+    localStorage.setItem('db', JSON.stringify(dados));
+}
+
+// Exibir bikes na página
+function exibirBikes() {
+    let objBikes = leBikes();
+    let listaBikes = document.getElementById('listaBikes');
+    listaBikes.innerHTML = '';
+
+    objBikes.Bikes.forEach(bike => {
+        let bikeItem = document.createElement('div');
+        bikeItem.innerHTML = `
+            <img src="${bike.Imagem}" alt="Imagem da Bike">
+            <p>Marca: ${bike.Marca}</p>
+            <p>Aro: ${bike.Aro}</p>
+            <p>Marcha: ${bike.Marcha}</p>
+            <p>Freio: ${bike.Freio}</p>
+            <p>Cesta: ${bike.Cesta}</p>
+            <p>Descrição: ${bike.Descricao}</p>
+        `;
+        listaBikes.appendChild(bikeItem);
+    });
+}
+
+// Cadastrar bike
+function cadastrarBike() {
+    // Ler dados do localStorage
+    let objBikes = leBikes();
+
+    // Coletar dados do formulário
+    let strImagem = document.getElementById('imagemBike').value;
+    let strMarca = document.getElementById('marcaBike').value;
+    let strAro = document.getElementById('aroBike').value;
+    let strMarcha = document.getElementById('marchaBike').checked ? "Sim" : "Não";
+    let strFreio = document.getElementById('freioBike').checked ? "Sim" : "Não";
+    let strCesta = document.getElementById('cestaBike').checked ? "Sim" : "Não";
+    let strDescricao = document.getElementById('descricaoBike').value;
+
+    // Criar objeto com nova bike
+    let novaBike = {
+        Imagem: strImagem,
+        Marca: strMarca,
+        Aro: strAro,
+        Marcha: strMarcha,
+        Freio: strFreio,
+        Cesta: strCesta,
+        Descricao: strDescricao
+    };
+
+    // Adicionar nova bike ao objeto de bikes
+    objBikes.Bikes.push(novaBike);
+
+    // Salvar bikes no localStorage novamente
+    salvaBikes(objBikes);
+
+    // Informar o cadastro efetivado
+    alert('Bike cadastrada com sucesso');
+    window.open('/HTML - Easy Mov/ADM - Andre/Bikes.html', '_blank');
+    
+
+
+    // Atualizar a exibição das bikes
+    exibirBikes();
+}
+
+// Exibir as bikes ao carregar a página
+document.addEventListener('DOMContentLoaded', exibirBikes);
