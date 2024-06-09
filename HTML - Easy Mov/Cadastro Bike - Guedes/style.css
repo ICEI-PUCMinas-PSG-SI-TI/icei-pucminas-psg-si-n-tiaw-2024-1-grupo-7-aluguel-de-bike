@@ -51,7 +51,7 @@
     .container{
         border-radius: 10px;
         width: 60%;
-        height:75vh;
+        height:100%;
         display: flex;
         justify-content: center;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);

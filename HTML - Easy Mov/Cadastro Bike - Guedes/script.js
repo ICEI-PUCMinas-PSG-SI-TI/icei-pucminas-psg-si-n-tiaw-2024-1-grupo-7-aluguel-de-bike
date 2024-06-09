@@ -46,6 +46,8 @@ function cadastrarBike() {
     let strImagem = document.getElementById('imagemBike').value;
     let strMarca = document.getElementById('marcaBike').value;
     let strAro = document.getElementById('aroBike').value;
+    let strId = document.getElementById('idBike').value;
+    let strQuantBike = document.getElementById('quantBike').value;
     let strMarcha = document.getElementById('marchaBike').checked ? "Sim" : "Não";
     let strFreio = document.getElementById('freioBike').checked ? "Sim" : "Não";
     let strCesta = document.getElementById('cestaBike').checked ? "Sim" : "Não";
@@ -53,13 +55,17 @@ function cadastrarBike() {
 
     // Criar objeto com nova bike
     let novaBike = {
+        Id: strId,
         Imagem: strImagem,
         Marca: strMarca,
         Aro: strAro,
         Marcha: strMarcha,
         Freio: strFreio,
         Cesta: strCesta,
-        Descricao: strDescricao
+        Descricao: strDescricao,
+        Disponiveis: strQuantBike,
+        Alugadas: 0,
+        Indisponiveis: 0
     };
 
     // Adicionar nova bike ao objeto de bikes
