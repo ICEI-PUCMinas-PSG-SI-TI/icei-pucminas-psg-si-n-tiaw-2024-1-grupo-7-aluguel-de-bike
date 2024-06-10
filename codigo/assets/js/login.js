@@ -1,34 +1,43 @@
 document.getElementById('loginButton').addEventListener('click', fazerLogin);
 
-function fazerLogin() {
+async function fazerLogin() {
     var email = document.getElementById('inputEmail').value;
     var senha = document.getElementById('inputPassword').value;
 
-    /* Adicionar mais credenciais aqui, juntamente no arquivo Json*/
-    var credenciais =  [
-        {
-            "email": "administrador@adm.com",
-            "senha": "Admin123"
+    try {
+        // Carregar credenciais do arquivo JSON
+        const response = await fetch('../assets/testelogin.json');
+        if (!response.ok) {
+            throw new Error('Erro ao carregar o arquivo JSON');
         }
-        ,
-    {
-        "email": "Pucminas@puc.br",
-        "senha": "Puc12345"
-    }
-    
-    ];
+        const credenciais = await response.json();
 
-    var loginValido = false;
-    for (var i = 0; i < credenciais.length; i++) {
-        if (credenciais[i].email === email && credenciais[i].senha === senha) {
-            loginValido = true;
-            break;
+        // Verificar as credenciais
+        var loginValido = false;
+        var isAdmin = false;
+        for (var i = 0; i < credenciais.length; i++) {
+            if (credenciais[i].email === email && credenciais[i].senha === senha) {
+                loginValido = true;
+                isAdmin = credenciais[i].isAdmin || false;
+                break;
+            }
         }
-    }
 
-    if (loginValido) {
-        alert('Login realizado com sucesso!');
-    } else {
-        alert('Email ou senha incorretos. Por favor, tente novamente.');
+        if (loginValido) {
+            if (email === 'administrador@adm.com' && senha === 'Admin123') {
+                window.location.href = '../pages/area_logada.html'
+            } else {
+                if (isAdmin) {
+                    window.location.href = '../pages/area_logada.html';
+                } else {
+                    window.location.href = '../pages/area_logada.html'; 
+                }
+            }
+        } else {
+            alert('Email ou senha incorretos. Por favor, tente novamente.');
+        }
+    } catch (error) {
+        console.error('Erro:', error);
+        alert('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente mais tarde.');
     }
 }

@@ -3,7 +3,7 @@ async function fetchAndGenerateCards() {
         {
             "title": "Caloi",
             "text": "Bibicleta padrão - Melhor em segurança",
-            "link": "#",
+            "link": "../assets/js/alugar.js",
             "image": "../assets/images/bicicleta_caloi.png",
             "price": "R$ 80,00"
         },
@@ -49,10 +49,10 @@ function generateCards(data) {
                 <div class="card h-100">
                      <img class="card-img-top" src="${item.image}" alt="Card image cap">
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">${item.price} <small class="text-muted">/mês</small></h1>
-                        <h5 class="card-title">${item.title}</h5>
-                        <p class="card-text">${item.text}</p>
-                        <a href="${item.link}" class="btn btn-primary">Alugar</a>
+                        <h1 class="card-title pricing-card-title" id="price">${item.price} <small class="text-muted">/mês</small></h1>
+                        <h5 class="card-title" id="marca">${item.title}</h5>
+                        <p class="card-text" id="description">${item.text}</p>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="alugar()" id="alugar">Alugar</button>
                     </div>
                 </div>    
             </div>    
