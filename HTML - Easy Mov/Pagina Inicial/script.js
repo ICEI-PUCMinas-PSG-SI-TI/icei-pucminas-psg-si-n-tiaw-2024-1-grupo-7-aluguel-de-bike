@@ -14,15 +14,25 @@ async function fazerLogin() {
 
         // Verificar as credenciais
         var loginValido = false;
+        var isAdmin = false;
         for (var i = 0; i < credenciais.length; i++) {
             if (credenciais[i].email === email && credenciais[i].senha === senha) {
                 loginValido = true;
+                isAdmin = credenciais[i].isAdmin || false;
                 break;
             }
         }
 
         if (loginValido) {
-            window.location.href = '/HTML - Easy Mov/ADM - Andre/Logado.html';
+            if (email === 'administrador@adm.com' && senha === 'Admin123') {
+                window.location.href = '/HTML - Easy Mov/ADM - Andre/Logado.html';
+            } else {
+                if (isAdmin) {
+                    window.location.href = '/HTML - Easy Mov/ADM - Andre/Logado.html';
+                } else {
+                    window.location.href = '/HTML - Easy Mov/Usuario/UsuarioLogin.html'; 
+                }
+            }
         } else {
             alert('Email ou senha incorretos. Por favor, tente novamente.');
         }

@@ -25,12 +25,15 @@ function exibirBikes() {
     objBikes.Bikes.forEach(bike => {
         let bikeItem = document.createElement('div');
         bikeItem.innerHTML = `
+        <h5 class="card-title">${bike.idBike}</h5>
             <img src="${bike.Imagem}" alt="Imagem da Bike">
             <p>Marca: ${bike.Marca}</p>
             <p>Aro: ${bike.Aro}</p>
             <p>Marcha: ${bike.Marcha}</p>
             <p>Freio: ${bike.Freio}</p>
             <p>Cesta: ${bike.Cesta}</p>
+            <p> Preço: R$ ${bike.Valor}</p>
+            <p> Estoque: ${bike.QuantBike}  </p>
             <p>Descrição: ${bike.Descricao}</p>
         `;
         listaBikes.appendChild(bikeItem);
@@ -51,6 +54,7 @@ function cadastrarBike() {
     let strMarcha = document.getElementById('marchaBike').checked ? "Sim" : "Não";
     let strFreio = document.getElementById('freioBike').checked ? "Sim" : "Não";
     let strCesta = document.getElementById('cestaBike').checked ? "Sim" : "Não";
+    let strValor = document.getElementById('valorBike').value;
     let strDescricao = document.getElementById('descricaoBike').value;
 
     // Criar objeto com nova bike
@@ -62,6 +66,7 @@ function cadastrarBike() {
         Marcha: strMarcha,
         Freio: strFreio,
         Cesta: strCesta,
+        valor: strValor,
         Descricao: strDescricao,
         Disponiveis: strQuantBike,
         Alugadas: 0,

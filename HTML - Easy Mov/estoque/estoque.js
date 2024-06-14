@@ -33,14 +33,14 @@ function displaytela(items) {
         card.className = "col-12 col-md-3 p-0 m-0";
 
         card.innerHTML = `
-            <div class="card m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${item.Id}">
-                <img src="${item.Imagem}" class="card-img-top border" id="img200px">
-                <div class="card-body p-1">
-                    <p><b>Modelo:</b> ${item.Marca}</p>
-                    <p><b>Categoria:</b> Bicicletas</p>
-                    <p><b>Desc</b>: ${descricaoLimitada}</p>
-                </div>
-            </div>`;
+        <div class="card m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${item.Id}">
+        <img src="${item.Imagem}" class="card-img-top border" id="img200px">
+        <div class="card-body p-1">
+            <p><b>Modelo:</b> ${item.Marca}</p>
+            <p><b>Categoria:</b> Bicicletas</p>
+            <p><b>Desc:</b> ${descricaoLimitada}</p>
+        </div>
+    </div>`;
         
         div.appendChild(card);
     });
