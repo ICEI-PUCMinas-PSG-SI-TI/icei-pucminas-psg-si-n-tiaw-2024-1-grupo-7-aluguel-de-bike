@@ -57,6 +57,12 @@ function cadastrarBike() {
     let strValor = document.getElementById('valorBike').value;
     let strDescricao = document.getElementById('descricaoBike').value;
 
+    let valor = parseFloat(strValor);
+    let valorFormatado = valor.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+
     // Criar objeto com nova bike
     let novaBike = {
         Id: strId,

@@ -46,5 +46,17 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         background-color: whitesmoke;
+        
     }
     
+
+   
+    #Historico_Bikes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        width: 150px;
+        margin: 5px;
+    }
