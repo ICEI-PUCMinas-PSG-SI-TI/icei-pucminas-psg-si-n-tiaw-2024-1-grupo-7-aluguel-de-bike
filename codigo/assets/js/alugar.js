@@ -16,6 +16,13 @@ function salvaBikes(dados) {
 
 
 function alugar() {
+    let logado = localStorage.getItem('logado');
+
+    if (!logado) {
+        alert('Usuario não autenticado, favor realizar login!');    
+        window.location.href = '../pages/login.html';
+        return;
+    }
    
     let objBikes = leBikes();
 
