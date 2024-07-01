@@ -1,47 +1,58 @@
-// Configurar a ação do botão de cadastro
-document.getElementById('alugar').addEventListener('click', alugar);
+// document.getElementById('alugar').addEventListener('click', alugar);
 
-function leBikes() {
-    let strBikes = localStorage.getItem('db');
-    let objBikes = { Bikes: [] };
+function getBikesAlugadas() {
+    let strBikes = localStorage.getItem('bikes_alugadas');
     if (strBikes) {
         objBikes = JSON.parse(strBikes);
+        return objBikes;
     }
-    return objBikes;
+    return {};
 }
 
-function salvaBikes(dados) {
-    localStorage.setItem('db', JSON.stringify(dados));
+async function salvaBikes(dados) {
+    localStorage.setItem('bikes_alugadas', JSON.stringify(dados));
 }
 
 
-function alugar() {
+async function alugar(event) {
+    event.preventDefault();
     let logado = localStorage.getItem('logado');
-
-    if (!logado) {
-        alert('Usuario não autenticado, favor realizar login!');    
+    console.log("Logado ::" + logado);
+    if (logado !== "true") {
+        alert('Usuario não autenticado, favor realizar login!');
         window.location.href = '../pages/login.html';
         return;
     }
-   
-    let objBikes = leBikes();
 
-    let strMarca = document.getElementById('marca').innerText;
-    let strValor = document.getElementById('price').innerText;
-    let strDescricao = document.getElementById('description').innerText;
+    let objBikesAlugadas = getBikesAlugadas();
+
+    // let strMarca = document.getElementById('Marca').innerText;
+    // let strValor = document.getElementById('valor').innerText;
+    // let strDescricao = document.getElementById('Descricao').innerText;
+
+    let button = event.target;
+    let strMarca = button.getAttribute('data-marca');
+    let strValor = button.getAttribute('data-valor');
+    let strDescricao = button.getAttribute('data-descricao');
 
     let novaBike = {
         Marca: strMarca,
         valor: strValor,
-        Descricao: strDescricao
+        Descricao: strDescricao,
+        link: "../assets/js/alugar.js"
     };
 
-    objBikes.Bikes.push(novaBike);
+    let user = localStorage.getItem('usuario_logado');
 
-    salvaBikes(objBikes);
-    
+    if (!objBikesAlugadas[user]) {
+        objBikesAlugadas[user] = [];
+    }
+
+    objBikesAlugadas[user].push(novaBike);
+
+    await salvaBikes(objBikesAlugadas);
+
     alert('Bike alugada com sucesso');
-
 }
 
 

@@ -24,6 +24,7 @@ function exibirBikes() {
 
     objBikes.Bikes.forEach(bike => {
         let bikeItem = document.createElement('div');
+        console.log('BIKE ITEM DETAILS ==' + bikeItem);
         bikeItem.innerHTML = `
         <h5 class="card-title">${bike.idBike}</h5>
             <img src="${bike.Imagem}" alt="Imagem da Bike">
@@ -81,7 +82,9 @@ function cadastrarBike() {
 
     // Informar o cadastro efetivado
     alert('Bike cadastrada com sucesso');
-    window.open('../pages/gerenciamento_bikes.html', '_blank');
+    // window.open('../pages/gerenciamento_bikes.html', '_blank');
+
+    window.location.href = '../pages/gerenciamento_bikes.html';
     
 
 

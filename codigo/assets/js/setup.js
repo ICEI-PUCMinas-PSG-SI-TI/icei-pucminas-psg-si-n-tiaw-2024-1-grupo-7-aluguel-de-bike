@@ -13,7 +13,7 @@ let usuarios = [{
 const bikes = {
     Bikes: [
         {
-            "Id": "",
+            "Id": 1,
             "Imagem": "../assets/images/bicicleta_caloi.png",
             "Marca": "Caloi",
             "Aro": "19",
@@ -25,12 +25,17 @@ const bikes = {
             "Disponiveis": "2",
             "Alugadas": 0,
             "Indisponiveis": 0,
-            "link": "../assets/js/alugar.js"
+            "Link": "../assets/js/alugar.js"
         }
     ]
 };
 
-console.log("SETUP SUCESS")
+let strBikes = localStorage.getItem('db');
+if (!strBikes) {
+    localStorage.setItem('db', JSON.stringify(bikes));
+    console.log("SETUP SUCESS")
+}
+
 localStorage.setItem('usuarios', JSON.stringify(usuarios));
 localStorage.setItem('logado', false);
-localStorage.setItem('db', JSON.stringify(bikes));
+

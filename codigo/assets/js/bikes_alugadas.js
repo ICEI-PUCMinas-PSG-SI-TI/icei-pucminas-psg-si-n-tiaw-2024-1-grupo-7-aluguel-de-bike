@@ -1,11 +1,11 @@
 async function getProducts() {
-    let strBikes = localStorage.getItem('db');
+    let bikes_alugadas = JSON.parse(localStorage.getItem('bikes_alugadas'));
+    let user = localStorage.getItem('usuario_logado');
     let objBikes = [];
-    if (strBikes) {
-        objBikes = JSON.parse(strBikes);
+    if (bikes_alugadas[user]) {
+        objBikes = bikes_alugadas[user];
     }
-    console.log(objBikes.Bikes);
-    generateCards(objBikes.Bikes);
+    generateCards(objBikes);
 }
 
 
