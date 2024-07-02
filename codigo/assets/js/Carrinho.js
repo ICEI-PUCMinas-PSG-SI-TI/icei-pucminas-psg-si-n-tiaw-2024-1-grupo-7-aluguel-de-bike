@@ -81,14 +81,7 @@ function renderCartItems() {
         itemContainer.classList.add('col', 'mb-4'); // Adiciona classes do Bootstrap para espaçamento
 
         const itemContent = `
-            <div class="card" style="width: 150px;margin-top: 5px;">
-                <img src="${item.Imagem}" class="card-img-top" alt="Bike">
-                <div class="card-body">
-                    <p class="card-text">${item.Marca}</p>
-                    <p class="card-text">R$ ${item.valor}</p>
-                    <button type="button" class="btn btn-danger" onclick="removeFromCart(${index})">Remover</button>
-                </div>
-            </div>
+          
         `;
 
         itemContainer.innerHTML = itemContent;
