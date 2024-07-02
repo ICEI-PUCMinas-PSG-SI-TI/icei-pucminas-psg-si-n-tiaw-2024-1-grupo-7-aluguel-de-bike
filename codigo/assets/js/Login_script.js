@@ -6,7 +6,7 @@ async function fazerLogin() {
 
     try {
         // Carregar credenciais do arquivo JSON
-        const response = await fetch('testelogin.json');
+        const response = await fetch('/codigo/assets/json/testelogin.json');
         if (!response.ok) {
             throw new Error('Erro ao carregar o arquivo JSON');
         }
