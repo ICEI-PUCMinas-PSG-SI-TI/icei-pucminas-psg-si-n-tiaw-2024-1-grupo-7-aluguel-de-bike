@@ -48,8 +48,8 @@ function finalizarCadastro() {
     salvarPagina2();
     alert("Cadastro realizado com sucesso!");
     if (confirm("Deseja realizar outro cadastro?")) {
-        window.location.href = 'cad_Instituicoes.html';
+        window.location.href = '/codigo/pages/cad_Instituicoes.html';
     } else {
-        window.location.href = 'busca.html';
+        window.location.href = '/codigo/pages/Busca.html';
     }
 }
