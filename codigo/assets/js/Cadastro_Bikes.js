@@ -87,7 +87,7 @@ function cadastrarBike() {
 
     // Informar o cadastro efetivado
     alert('Bike cadastrada com sucesso');
-    window.open('/HTML - Easy Mov/ADM - Andre/Bikes.html', '_blank');
+    window.open('/codigo/pages/Adm_Bikes.html', '_blank');
     
 
 
