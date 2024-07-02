@@ -30,7 +30,7 @@ async function fazerLogin() {
                 if (isAdmin) {
                     window.location.href = '/codigo/pages/Adm_Logado.html';
                 } else {
-                    window.location.href = '/HTML - Easy Mov/Usuario/UsuarioLogin.html'; 
+                    window.location.href = '/codigo/pages/Usuario_Login.html'; 
                 }
             }
         } else {
