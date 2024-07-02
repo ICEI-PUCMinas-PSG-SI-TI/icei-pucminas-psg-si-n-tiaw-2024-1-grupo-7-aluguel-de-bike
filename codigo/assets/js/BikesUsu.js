@@ -152,10 +152,11 @@ function showBikeDetails(index) {
     const bike = objBikes.Bikes[index];
     const modalBody = document.getElementById('modalBody');
     modalBody.innerHTML = `
+    <img src="${bike.Imagem}" style=" width: 18rem; "  class="card-img-top border" id="modalImg">
         <div class="card m-1">
             <div class="row">
                 <div class="col-4">
-                    <img src="${bike.Imagem}" class="card-img-top border" id="modalImg">
+                    
                 </div>
                 <div class="col-8">
                     <p><b>Modelo:</b> ${bike.Marca}</p>
