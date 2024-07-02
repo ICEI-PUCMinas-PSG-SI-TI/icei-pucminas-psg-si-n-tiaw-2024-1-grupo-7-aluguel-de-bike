@@ -25,10 +25,10 @@ async function fazerLogin() {
 
         if (loginValido) {
             if (email === 'administrador@adm.com' && senha === 'Admin123') {
-                window.location.href = '/HTML - Easy Mov/ADM - Andre/Logado.html';
+                window.location.href = '/codigo/pages/Adm_Logado.html';
             } else {
                 if (isAdmin) {
-                    window.location.href = '/HTML - Easy Mov/ADM - Andre/Logado.html';
+                    window.location.href = '/codigo/pages/Adm_Logado.html';
                 } else {
                     window.location.href = '/HTML - Easy Mov/Usuario/UsuarioLogin.html'; 
                 }
